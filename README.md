@@ -22,7 +22,29 @@ class Clase{
     int * vec2;
     void Editar(int n);
 }
-
 ```
 
 :smile: :computer:
+
+## Boole en la funcion para comprobaciones
+
+````c++
+const int SIZE=50;
+
+class Clase{
+  private:
+    int vectorPrivado[SIZE];
+    int utilizados;
+
+  public:
+    bool AsignarValores(int valores[], int numValores){
+      bool flag = false;
+      if(numValores<=SIZE){
+        for(int i=0;i<numValores;i++){ vectorPrivado[i]=valores[i];}
+
+        utilizados = numValores;
+        flag = true;
+      }
+      return flag;
+    }
+````
