@@ -2,7 +2,7 @@
 
 ## Datos curiosos
 
-```c++
+````c++
 // constante dimensional
 const int SIZE=10;
 
@@ -22,9 +22,9 @@ class Clase{
     int * vec2;
     void Editar(int n);
 }
-```
+````
 
-:smile: :computer:
+:smile: :computer:  [Lista de Emojis](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 ## Boole en la funcion para comprobaciones
 
