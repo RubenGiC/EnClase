@@ -124,11 +124,11 @@ cin.ignore();
 
 ## Libreria <cstring\>
 
-La libreria ** (cstring) ** sirve para llamar a ** (str) **
+La libreria **(cstring)** sirve para llamar a **(str)**
 - **(strcpy):** copia un sring
-- ** (strlen): ** devuelve la longitud del contenido de una variable string
-- ** (strcat): ** concatena 2 strings
-- ** (strmp): ** compara cadenas
+- **(strlen):** devuelve la longitud del contenido de una variable string
+- **(strcat):** concatena 2 strings
+- **(strmp):** compara cadenas
 
 ### Implementacion:
 
