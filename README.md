@@ -65,6 +65,7 @@ String Mostrar(){
 ## Punteros, Vectores y Matrices
 
 ````c++
+int num; // int
 int * puntero; // puntero
 int * vector [SIZE]; // VECTOR de tipo int
 int ** vector [SIZE] // vector de punteros de tipo (int *)
@@ -76,6 +77,23 @@ Valor *vec = new Valor [20];
 * de que el valor este protegido.
 */
 const Valor **vec_ord = new const Valor *[20];
+
+/* devuelve la direccion de memoria sin acortar, long lo que hace es mostrar valores
+* muy grandes.
+*/
+long(puntero);
+
+// devuelve el contenido de la direccion de memoria a la que apunta.
+*puntero;
+
+//apunto a la direccion de memoria de num
+puntero = &num;
+
+// modifico el contenido de num a la que apunta.
+*puntero = 10;
+
+// devuelve la direccion de memoria reservada de esa variable.
+&num;
 ````
 
 ## Constantes en funciones
@@ -127,3 +145,7 @@ strcpy (str,"these "); // copia el contenido de la 2º sentencia y lo guarda en 
 strlen(variable); // devuelve el tamaño utilizado de esa variable
 sizeof(variable); // devuelve el tamaño total contando el espacio no utilizado
 ````
+
+## Uso de NULL
+
+Hay que usar la libreria [** (cstdlib) **]: http://www.cplusplus.com/reference/cstdlib/
