@@ -100,3 +100,30 @@ getline(cin,variable);
 //si mezclamos ambos despues de hacen un cin hay que poner esto para que lo ignore
 cin.ignore();
 ````
+
+## Libreria <cstring\>
+
+La libreria ** (cstring) ** sirve para llamar a ** (str) **
+- ** (strcpy): ** copia un sring
+- ** (strlen): ** devuelve la longitud del contenido de una variable string
+- ** (strcat): ** concatena 2 strings
+- ** (strmp): ** compara cadenas
+
+### Implementacion:
+
+````c++
+strcmp (key,buffer); //--> devuelve 0 u otro valor (0==true, otro valor==false)
+/*
+strcmp < 0	the first character that does not match has a lower value in ptr1 than in ptr2
+strcmp = 0	the contents of both strings are equal
+strcmp > 0	the first character that does not match has a greater value in ptr1 than in ptr2
+*/
+
+strcat (str,"strings "); // concatena en la ultima posicion
+
+//char * strcpy ( char * destination, const char * source );
+strcpy (str,"these "); // copia el contenido de la 2º sentencia y lo guarda en la 1º sentencia.
+
+strlen(variable); // devuelve el tamaño utilizado de esa variable
+sizeof(variable); // devuelve el tamaño total contando el espacio no utilizado
+````
