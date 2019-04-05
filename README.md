@@ -83,3 +83,20 @@ Indica que la funcion se compromete a no modificar los datos miembro.
 ````c++
 bool obtenerValor(int num, int &num_cop) const;
 ````
+
+## Formas de recibir los datos
+
+````c++
+/* recibe los datos normales hasta que de intro (NO CONSUME EL ENTER) y los guarda
+* en la variable.
+*/
+cin >> variable;
+/* Este hace lo mismo pero con la diferencia de que puede introducir varios datos
+ * separados hasta darle intro (CONSUME EL ENTER) o hasta que llene la variable
+ * o de error al recibir un dato erroneo.
+ */
+getline(cin,variable);
+
+//si mezclamos ambos despues de hacen un cin hay que poner esto para que lo ignore
+cin.ignore();
+````
