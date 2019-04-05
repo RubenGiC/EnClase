@@ -100,7 +100,7 @@ puntero = &num;
 
 ## Constantes en funciones
 Indica que la funcion se compromete a no modificar los datos miembro. <br>
-El <b style="color:white;">(&)</b> la variable es devuelta por referencia, la ventaja de ser por referencia es que oculta la informacion.
+El <b>(&)</b> la variable es devuelta por referencia, la ventaja de ser por referencia es que oculta la informacion.
 ````c++
 bool obtenerValor(int num, int &num_cop) const;
 ````
