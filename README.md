@@ -47,4 +47,39 @@ class Clase{
       }
       return flag;
     }
+}
+````
+
+## Flujo de datos (Entrada/Salida)
+
+````c++
+String Mostrar(){
+  //creo el flujo de datos
+  String stream oss;
+  oss << "mostrar en pantalla";
+  //devuelvo un string
+  return oss.str();
+}
+````
+
+## Punteros, Vectores y Matrices
+
+````c++
+int * puntero; // puntero
+int * vector [SIZE]; // VECTOR de tipo int
+int ** vector [SIZE] // vector de punteros de tipo (int *)
+
+//reservo una direccion de menoria de 20 posiciones de tipo Valor en un vector de tipo Valor.
+Valor *vec = new Valor [20];
+/*reservo una direccion de memoria de 20 tambien de (Valor *), es decir un puntero
+* de tipo Valor que apuntara a la direccion de memoria de tipo Valor y me aseguro
+* de que el valor este protegido.
+*/
+const Valor **vec_ord = new const Valor *[20];
+````
+
+## Constantes en funciones
+Indica que la funcion se compromete a no modificar los datos miembro.
+````c++
+bool obtenerValor(int num, int &num_cop) const;
 ````
