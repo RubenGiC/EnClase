@@ -148,4 +148,4 @@ sizeof(variable); // devuelve el tamaño total contando el espacio no utilizado
 
 ## Uso de NULL
 
-Hay que usar la libreria ** [(cstdlib)](http://www.cplusplus.com/reference/cstdlib/) **
+Hay que usar la libreria <b>[(cstdlib)](http://www.cplusplus.com/reference/cstdlib/)</b>
