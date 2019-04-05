@@ -12,7 +12,7 @@ class Clase{
 
   //funciones y variables privadas
   private:
-  
+
     int * vec;
     void Mostrar(int n);
 
@@ -24,3 +24,5 @@ class Clase{
 }
 
 ```
+
+:smile: :computer:
