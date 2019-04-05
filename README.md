@@ -67,6 +67,7 @@ String Mostrar(){
 ````c++
 int num; // int
 int * puntero; // puntero
+int array [SIZE] // Array es un puntero constante
 int * vector [SIZE]; // VECTOR de tipo int
 int ** vector [SIZE] // vector de punteros de tipo (int *)
 
@@ -94,10 +95,12 @@ puntero = &num;
 
 // devuelve la direccion de memoria reservada de esa variable.
 &num;
+&(array[5]); // lo mismo que el otro pero con vectores.
 ````
 
 ## Constantes en funciones
-Indica que la funcion se compromete a no modificar los datos miembro.
+Indica que la funcion se compromete a no modificar los datos miembro. <br>
+El <b style="color:white;">(&)</b> la variable es devuelta por referencia, la ventaja de ser por referencia es que oculta la informacion.
 ````c++
 bool obtenerValor(int num, int &num_cop) const;
 ````
@@ -149,3 +152,16 @@ sizeof(variable); // devuelve el tamaño total contando el espacio no utilizado
 ## Uso de NULL
 
 Hay que usar la libreria <b>[(cstdlib)](http://www.cplusplus.com/reference/cstdlib/)</b>
+
+## Funciones que piden punteros
+
+````c++
+void Funcion(int *);
+
+int n;
+int * pn;
+
+//ambos son validos
+Funcion(&n);
+Funcion(pn);
+````
