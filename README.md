@@ -114,6 +114,7 @@ int main(){
 
 ## Punteros, Vectores y Matrices
 Los punteros no tienen limite de apuntamiento, pueden apuntarse muchas veces.
+Ver matriz completa ([matriz2d.h](https://github.com/RubenGiC/EnClase/blob/master/include/matriz2d.h), [matriz2d.cpp](https://github.com/RubenGiC/EnClase/blob/master/src/matriz2d.cpp) y [main](https://github.com/RubenGiC/EnClase/blob/master/main.cpp))
 
 ````c++
 int num; // int
