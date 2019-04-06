@@ -21,7 +21,7 @@ class Clase{
 
     int * vec2;
     void Editar(int n);
-}
+};
 ````
 
 :smile: :computer:  [Lista de Emojis](https://www.webfx.com/tools/emoji-cheat-sheet/)
@@ -47,18 +47,39 @@ class Clase{
       }
       return flag;
     }
+};
+
+int main(){
+  Clase c;// creo el objeto Clase  
+  int array[5]{1,2,3,4,5};
+  int num=0;
+
+  //esto devolvera true (1)
+  cout << c.AsignarValores(array,num);
 }
 ````
 
 ## Flujo de datos (Entrada/Salida)
+Se utiliza para el string la libreria __<string>__ y para el stringstream la
+libreria __<sstream>__.
 
 ````c++
-String Mostrar(){
-  //creo el flujo de datos
-  String stream oss;
+//implementar estas librerias siempre tanto en el main() como en el .cpp
+#include <string> // para usar el string
+#include <sstream>      // std::stringstream
+
+string Mostrar(){
+  //creo el flujo de datos, en el que se alamcenara los datos
+  stringstream oss;
+  //guardo el texto en oss
   oss << "mostrar en pantalla";
   //devuelvo un string
   return oss.str();
+}
+
+int main(){
+  // muestra el contenido por que lo que devuelve es un string
+  cout << Mostrar();
 }
 ````
 

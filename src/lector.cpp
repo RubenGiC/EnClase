@@ -6,9 +6,13 @@
 #include "lector.h"
 using namespace std;
 
-void prueba(){
-    cout << "hola";
-}
+bool Buscar(int n, int num){
+      bool flag = false;
+      if(n==num){
+        flag = true;
+      }
+      return flag;
+    }
 
 /**
  * Inicializador
@@ -16,7 +20,7 @@ void prueba(){
  * @param util tamaño utilizado del array
  */
 void Inicializar(char * &array,int &util){
-    array = 0;
+    array = 0;// inicializo el puntero para que sea nulo
     util = 0;
 }
 

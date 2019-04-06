@@ -13,7 +13,9 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <fstream>
+#include <fstream> // necesario para ifstream
+// se incluye el archivo de cabecera con las declaraciones de las
+// funciones pedidas
 #include "lector.h"
 
 using namespace std;
@@ -22,23 +24,30 @@ int main(int argc, char** argv) {
 
     char * arrayChar;
     int utiles=0;
+  
+    Inicializar(arrayChar,utiles);
     
-    //Inicializar(arrayChar,utiles);
-    
-    //si solo recibe una instruccion lo añade de forma manual
+    //si solo recibe un argumento lo añade de forma manual
     if(argc == 1){ Leer(cin,arrayChar, utiles);}
     else{
-        //creo un flujo para recibir los datos
+        /* en este caso se entiende que el segundo argumento, almacenado
+         * en argv[1] contiene el nombre del archivo del que hay que
+         * leer. Para ello hace falta crear un objeto de la clase
+         * ifstream (input file stream)que permita gestionar la lectura 
+         * desde el archivo.
+         */
         ifstream fhijo(argv[1]);
-        //si el flujo es nulo muestra un mensaje de error
+        //Si al leer la lectura del archivo es erronea mostrara este mensaje
         if(!fhijo){
-            cerr << "Error apertura" << argv[1] << endl;
+            cerr << "Error apertura del archivo: " << argv[1] << endl;
             return 1; // finaliza el programa
         }
+        
         Leer(fhijo,arrayChar,utiles);
     }
     
     Mostrar(cout,arrayChar,utiles);
+    // se libera el espacio
     Liberar(arrayChar,utiles);
     
     return 0;

@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+/* se incluyen directivas de compilacion condicional. La primera
+ * vez que el compilador procese este archivo se define el simbolo
+ * LECTOR_H, de forma que si hay varios includes de este archivo
+ * no se volvera a procesar, evitando asi la repeticion de simbolos
+ */
 #ifndef LECTOR_H
 #define LECTOR_H
 #include <iostream>
