@@ -1,5 +1,25 @@
 # Notas en clase
 
+## Indice
+
+* [Datos curiosos](Datos curiosos)
+* [Constantes]()
+* [Constantes en Funciones]()
+* [Boole en la funcion para comprobaciones]()
+* [Flujo de datos (Entrada/Salida)]()
+* [Formas de leer los datos (cin y getline)]()
+* [Punteros, vectores y matrices]()
+* [Funciones que piden punteros]()
+* [Punteros con clases]()
+* [Libreria <cstring\>]()
+* [Uso de NULL]()
+* [Random (Numeros aleatorios)]()
+* [Creacion de objetos]()
+* [Creacion de funcionalidad de una funcion de una clase]()
+* [This]()
+* [Reduccion de tiempo de ejecucion (inline)]()
+* [Constructor que recibe un objeto]()
+
 ## Datos curiosos
 <iostream\> tiene *cin*, *cout* y *cerr* <br>
 ***En [main](https://github.com/RubenGiC/EnClase/blob/master/main.cpp), [vectorsd.h](https://github.com/RubenGiC/EnClase/blob/master/include/vectorsd.h) y [vectorsd.cpp](https://github.com/RubenGiC/EnClase/blob/master/src/vectorsd.cpp), he añadido una clase que utiliza .h y funciona***
@@ -55,6 +75,12 @@ double * const puntero;
 //protejo ambas cosas el contenido y al puntero (NO SE PUEDE MODIFICAR NI EL CONTENIDO, NI EL PUNTERO)
 const int * const puntero;
 ```
+## Constantes en funciones
+Indica que la funcion se compromete a no modificar los datos miembro. <br>
+El <b>(&)</b> la variable es devuelta por referencia, la ventaja de ser por referencia es que oculta la informacion.
+````c++
+bool obtenerValor(int num, int &num_cop) const;
+````
 ## Boole en la funcion para comprobaciones
 
 ````c++
@@ -111,7 +137,23 @@ int main(){
   cout << Mostrar();
 }
 ````
+## Formas de recibir los datos
 
+````c++
+/* recibe los datos normales hasta que de intro (NO CONSUME EL ENTER) y los guarda
+* en la variable.
+*/
+cin >> variable;
+/* Este hace lo mismo pero con la diferencia de que puede introducir varios datos
+ * separados hasta darle intro (CONSUME EL ENTER) o hasta que llene la variable
+ * o de error al recibir un dato erroneo.
+ */
+// variable tiene que ser un string, por que lo que devuelve es un string
+getline(cin,variable);
+
+//si mezclamos ambos despues de hacen un cin hay que poner esto para que lo ignore
+cin.ignore();
+````
 ## Punteros, Vectores y Matrices
 Los punteros no tienen limite de apuntamiento, pueden apuntarse muchas veces.
 Ver matriz completa ([matriz2d.h](https://github.com/RubenGiC/EnClase/blob/master/include/matriz2d.h), [matriz2d.cpp](https://github.com/RubenGiC/EnClase/blob/master/src/matriz2d.cpp) y [main](https://github.com/RubenGiC/EnClase/blob/master/main.cpp))
@@ -174,32 +216,29 @@ for(int i=0;i<util;i++){
 //libero las columnas
 delete [] matriz;
 ````
-
-## Constantes en funciones
-Indica que la funcion se compromete a no modificar los datos miembro. <br>
-El <b>(&)</b> la variable es devuelta por referencia, la ventaja de ser por referencia es que oculta la informacion.
-````c++
-bool obtenerValor(int num, int &num_cop) const;
-````
-
-## Formas de recibir los datos
+## Funciones que piden punteros
 
 ````c++
-/* recibe los datos normales hasta que de intro (NO CONSUME EL ENTER) y los guarda
-* en la variable.
-*/
-cin >> variable;
-/* Este hace lo mismo pero con la diferencia de que puede introducir varios datos
- * separados hasta darle intro (CONSUME EL ENTER) o hasta que llene la variable
- * o de error al recibir un dato erroneo.
- */
-// variable tiene que ser un string, por que lo que devuelve es un string
-getline(cin,variable);
+void Funcion(int *);
 
-//si mezclamos ambos despues de hacen un cin hay que poner esto para que lo ignore
-cin.ignore();
+int n;
+int * pn;
+
+//ambos son validos
+Funcion(&n);
+Funcion(pn);
 ````
+## Punteros con clases
 
+```c++
+//igual que con las variables pero con la diferencia de que son clases
+Clase * puntero;
+Clase clase;
+puntero = &clase;
+//para llamar a una funcion de la clase desde un puntero hay 2 formas
+(* puntero).funcion();
+puntero->funcion();
+```
 ## Libreria <cstring\>
 
 La libreria **(cstring)** sirve para llamar a **(str)**
@@ -230,30 +269,6 @@ sizeof(variable); // devuelve el tamaño total contando el espacio no utilizado
 ## Uso de NULL
 
 Hay que usar la libreria <b>[(cstdlib)](http://www.cplusplus.com/reference/cstdlib/)</b>
-
-## Funciones que piden punteros
-
-````c++
-void Funcion(int *);
-
-int n;
-int * pn;
-
-//ambos son validos
-Funcion(&n);
-Funcion(pn);
-````
-## Punteros con clases
-
-```c++
-//igual que con las variables pero con la diferencia de que son clases
-Clase * puntero;
-Clase clase;
-puntero = &clase;
-//para llamar a una funcion de la clase desde un puntero hay 2 formas
-(* puntero).funcion();
-puntero->funcion();
-```
 
 ## Numeros aleatorios
 variable = limite_inferior + rand() % (limite_superior +1 - limite_inferior) ;
@@ -339,7 +354,7 @@ Se introduce la función en línea, que es una técnica de optimización utiliza
 ```c++
 inline int getFilas(){ return numFilas;}
 ```
-## constructor que recibe un objeto
+## Constructor que recibe un objeto
 cuando el constructor recibe un objeto como parametro a la fuerza ese objeto se tiene que devolver por referencia.
 ```c++
 //El constructor tiene que ser obligatorio por referencia
