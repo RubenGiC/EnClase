@@ -1,7 +1,7 @@
 # Notas en clase
 
 ## Datos curiosos
-
+<iostream\> tiene *cin*, *cout* y *cerr*
 ````c++
 // constante dimensional
 const int SIZE=10;
@@ -25,7 +25,7 @@ class Clase{
     void Ordenar(int array[],int util,bool(* comp)(int,int)){
       for(int i=0;...){
         for(int j=0;...){
-          if(!(*comp))(array[i],array[j]){}
+          if(!(* comp))(array[i],array[j]){}
         }
       }
     }
