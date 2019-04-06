@@ -91,6 +91,18 @@ int * puntero; // puntero
 int array [SIZE] // Array es un puntero constante
 int * vector [SIZE]; // VECTOR de tipo int
 int ** vector [SIZE] // vector de punteros de tipo (int *)
+int matriz [cols][fils] // matriz de 2 dimensiones
+
+// matriz dinamica
+int **matriz;
+int fila_dinamica;
+int columna_dinamica;
+
+matriz = new int *[fila_dinamica];
+
+  for(int i = 0;i<fila_dinamica;i++){
+    matriz[i] = new int[columna_dinamica];
+  }
 
 //reservo una direccion de menoria de 20 posiciones de tipo Valor en un vector de tipo Valor.
 Valor *vec = new Valor [20];
@@ -117,6 +129,18 @@ puntero = &num;
 // devuelve la direccion de memoria reservada de esa variable.
 &num;
 &(array[5]); // lo mismo que el otro pero con vectores.
+
+//Al funalizar hay que liberar el espacio utilizado de los vectores y matrices
+delete [] array;
+delete [] vector;
+
+// en el caso de una matriz ya sea dinamica o no primero liberas las filas y luego las columnas
+for(int i=0;i<util;i++){
+  //libero las filas
+  delete [] matriz[i];
+}
+//libero las columnas
+delete [] matriz;
 ````
 
 ## Constantes en funciones
@@ -137,6 +161,7 @@ cin >> variable;
  * separados hasta darle intro (CONSUME EL ENTER) o hasta que llene la variable
  * o de error al recibir un dato erroneo.
  */
+// variable tiene que ser un string, por que lo que devuelve es un string
 getline(cin,variable);
 
 //si mezclamos ambos despues de hacen un cin hay que poner esto para que lo ignore

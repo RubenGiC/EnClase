@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 
     char * arrayChar;
     int utiles=0;
-  
+ 
     Inicializar(arrayChar,utiles);
     
     //si solo recibe un argumento lo añade de forma manual
