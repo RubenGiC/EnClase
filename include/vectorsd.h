@@ -1,3 +1,9 @@
+/* 
+ * File:   main.cpp
+ * Author: RubenGiC
+ *
+ * Created on 5 de abril de 2019, 16:32
+ */
 #ifndef VECTORSD_H
 #define VECTORSD_H
 #include <iostream>

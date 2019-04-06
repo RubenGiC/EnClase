@@ -1,8 +1,8 @@
-
-/* se incluyen directivas de compilacion condicional. La primera
- * vez que el compilador procese este archivo se define el simbolo
- * LECTOR_H, de forma que si hay varios includes de este archivo
- * no se volvera a procesar, evitando asi la repeticion de simbolos
+/* 
+ * File:   main.cpp
+ * Author: RubenGiC
+ *
+ * Created on 5 de abril de 2019, 16:32
  */
 #ifndef LECTOR_H
 #define LECTOR_H

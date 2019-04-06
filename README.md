@@ -330,3 +330,17 @@ En c++ se puede utilizar el this en las funciones.
 //pueden ser el mismo nombre ambas variables
 this.variable=variable
 ```
+
+## Reduccion de tiempo de ejecucion **(inline)**
+
+Se introduce la función en línea, que es una técnica de optimización utilizada por los compiladores, especialmente para reducir el tiempo de ejecución.
+
+```c++
+inline int getFilas(){ return numFilas;}
+```
+## constructor que recibe un objeto
+cuando el constructor recibe un objeto como parametro a la fuerza ese objeto se tiene que devolver por referencia.
+```c++
+//El constructor tiene que ser obligatorio por referencia
+Matriz2d(const Matriz2d &matriz2);
+```

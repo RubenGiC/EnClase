@@ -1,3 +1,9 @@
+/* 
+ * File:   main.cpp
+ * Author: RubenGiC
+ *
+ * Created on 5 de abril de 2019, 16:32
+ */
 #include <iostream>
 #include "doble_puntero.h"
 

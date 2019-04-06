@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/src/doble_puntero.o \
 	${OBJECTDIR}/src/lector.o \
+	${OBJECTDIR}/src/matriz2d.o \
 	${OBJECTDIR}/src/vectorsd.o
 
 
@@ -70,6 +71,16 @@ ${OBJECTDIR}/include/doble_puntero.h.gch: include/doble_puntero.h
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o "$@" include/doble_puntero.h
 
+${OBJECTDIR}/include/lector.h.gch: include/lector.h
+	${MKDIR} -p ${OBJECTDIR}/include
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o "$@" include/lector.h
+
+${OBJECTDIR}/include/matriz2d.h.gch: include/matriz2d.h
+	${MKDIR} -p ${OBJECTDIR}/include
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o "$@" include/matriz2d.h
+
 ${OBJECTDIR}/include/vectorsd.h.gch: include/vectorsd.h
 	${MKDIR} -p ${OBJECTDIR}/include
 	${RM} "$@.d"
@@ -89,6 +100,11 @@ ${OBJECTDIR}/src/lector.o: src/lector.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/lector.o src/lector.cpp
+
+${OBJECTDIR}/src/matriz2d.o: src/matriz2d.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/matriz2d.o src/matriz2d.cpp
 
 ${OBJECTDIR}/src/vectorsd.o: src/vectorsd.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

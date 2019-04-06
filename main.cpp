@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
- * Author: ruben
+ * Author: RubenGiC
  *
  * Created on 5 de abril de 2019, 16:32
  */
@@ -19,14 +13,25 @@
 #include "lector.h"
 #include "doble_puntero.h"
 #include "vectorsd.h"
+#include "matriz2d.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
     
+// MATRIZ2D --------------------------------------------------------------------
+    
+    cout << "MATRIZ2D ---------------------------------------------------------" << endl;
+    
+    int fil=3,col=3;
+    Matriz2d *obj1 = new Matriz2d(fil,col);
+    obj1->leer();
+    obj1->mostrarPantalla();
+    obj1->liberar();
+    
 // VECTORSD --------------------------------------------------------------------
     
-    cout << "VECTORSD ---------------------------------------------------------" << endl;
+    /*cout << "VECTORSD ---------------------------------------------------------" << endl;
     
     VectorSD *obj = new VectorSD(5);
     VectorSD *obj2 = new VectorSD;
@@ -39,7 +44,7 @@ int main(int argc, char** argv) {
     cout << endl << "Segundo objeto: " << endl;
     obj2->Mostrar(cout);
     
-    obj->Liberar();
+    obj->Liberar();*/
 
 // DOBLE PUNTERO ---------------------------------------------------------------
     
@@ -58,7 +63,7 @@ int main(int argc, char** argv) {
     
 // LECTOR ----------------------------------------------------------------------
     
-    cout << "LECTOR -----------------------------------------------------------" << endl;
+    /*cout << "LECTOR -----------------------------------------------------------" << endl;
     
     cin.ignore();
     
@@ -76,7 +81,7 @@ int main(int argc, char** argv) {
          * ifstream (input file stream)que permita gestionar la lectura 
          * desde el archivo.
          */
-        ifstream fhijo(argv[1]);
+        /*ifstream fhijo(argv[1]);
         //Si al leer la lectura del archivo es erronea mostrara este mensaje
         if(!fhijo){
             cerr << "Error apertura del archivo: " << argv[1] << endl;
@@ -88,7 +93,7 @@ int main(int argc, char** argv) {
     
     Mostrar(cout,arrayChar,utiles);
     // se libera el espacio
-    Liberar(arrayChar,utiles);
+    Liberar(arrayChar,utiles);*/
     
 //------------------------------------------------------------------------------
     return 0;
