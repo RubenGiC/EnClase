@@ -17,14 +17,25 @@
 // se incluye el archivo de cabecera con las declaraciones de las
 // funciones pedidas
 #include "lector.h"
+#include "doble_puntero.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
 
     char * arrayChar;
-    int utiles=0;
- 
+    int utiles, utiles2;
+    
+    char ** array;
+    
+    //para crear clases con .h, la clase se tiene que llamar igual que el archivo
+    //Nota: (puede ser en mayuscula y el archivo no, pero que tenga el mismo nombre)
+    //siempre tengo que reservar memoria para crear un objeto de la clase Doble_puntero
+    Doble_puntero *v = new Doble_puntero;
+    
+    //falla el inicializar
+    //v.Inicializar(array,utiles2);
+    v->Redimensionar(array,utiles,1);
     Inicializar(arrayChar,utiles);
     
     //si solo recibe un argumento lo añade de forma manual
@@ -49,6 +60,9 @@ int main(int argc, char** argv) {
     Mostrar(cout,arrayChar,utiles);
     // se libera el espacio
     Liberar(arrayChar,utiles);
+    
+    delete [] array;
+    delete [] arrayChar;
     
     return 0;
 }

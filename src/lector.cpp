@@ -6,14 +6,6 @@
 #include "lector.h"
 using namespace std;
 
-bool Buscar(int n, int num){
-      bool flag = false;
-      if(n==num){
-        flag = true;
-      }
-      return flag;
-    }
-
 /**
  * Inicializador
  * @param array array de caracteres

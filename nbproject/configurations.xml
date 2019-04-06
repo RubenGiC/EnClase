@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="include" displayName="include" projectFiles="true">
+        <itemPath>include/doble_puntero.h</itemPath>
         <itemPath>include/lector.h</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -18,6 +19,7 @@
       <logicalFolder name="src" displayName="src" projectFiles="true">
         <itemPath>src/lector.cpp</itemPath>
       </logicalFolder>
+      <itemPath>src/doble_puntero.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -52,9 +54,13 @@
           </incDir>
         </ccTool>
       </compileType>
+      <item path="include/doble_puntero.h" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="include/lector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/doble_puntero.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/lector.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -79,9 +85,13 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="include/doble_puntero.h" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="include/lector.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/doble_puntero.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/lector.cpp" ex="false" tool="1" flavor2="0">
       </item>
