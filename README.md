@@ -2,7 +2,7 @@
 
 ## Datos curiosos
 <iostream\> tiene *cin*, *cout* y *cerr* <br>
-***En main, doble_puntero.h y doble_puntero.cpp, he añadido una clase que utiliza .h***
+***En [main](https://github.com/RubenGiC/EnClase/blob/master/include/main.cpp), [vectorsd.h](https://github.com/RubenGiC/EnClase/blob/master/include/vectorsd.h) y [vectorsd.cpp](https://github.com/RubenGiC/EnClase/blob/master/include/vectorsd.cpp), he añadido una clase que utiliza .h y funciona*** 
 ````c++
 // constante dimensional
 const int SIZE=10;
