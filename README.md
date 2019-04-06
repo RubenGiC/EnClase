@@ -2,7 +2,7 @@
 
 ## Datos curiosos
 <iostream\> tiene *cin*, *cout* y *cerr* <br>
-***En [main](https://github.com/RubenGiC/EnClase/blob/master/main.cpp), [vectorsd.h](https://github.com/RubenGiC/EnClase/blob/master/include/vectorsd.h) y [vectorsd.cpp](https://github.com/RubenGiC/EnClase/blob/master/src/vectorsd.cpp), he añadido una clase que utiliza .h y funciona*** 
+***En [main](https://github.com/RubenGiC/EnClase/blob/master/main.cpp), [vectorsd.h](https://github.com/RubenGiC/EnClase/blob/master/include/vectorsd.h) y [vectorsd.cpp](https://github.com/RubenGiC/EnClase/blob/master/src/vectorsd.cpp), he añadido una clase que utiliza .h y funciona***
 ````c++
 // constante dimensional
 const int SIZE=10;
@@ -286,10 +286,40 @@ int main(){
 
 ```c++
 Clase ptr;
-ptr = new Clase();//creo un objeto de Clase
+//creacion de un objeto de Clase
+ptr = new Clase();//Clase() es el constructor de la clase
+Clase *obj2 = new Clase; //esta es igual a la anterior si no tiene parametros
+// Clase(5) inicializa el objeto pasandole como parametro un int
+Clase *obj = new Clase(5);
 
-//siempre cada vez que creo un objeto se libera
-delete ptr;
+//claro el objeto que creo es un puntero, asique para llamar las funciones hay 2 formas
+obj->Leer(cin); //recomiendo este
+(* obj).Mostrar(cout);
+```
+
+## Creacion de funcionalidad de una funcion de una clase
+Para poder acceder a la funcion de una clase para crear su funcionalidad tenemos que llamar a la clase para poder acceder a la funcion e indicarle que va a hacer esa funcion. Ejemplo:
+
+```c++
+VectorSD::VectorSD(){
+    info = new int[SIZE];
+    reservado = SIZE;
+    util = 0;
+}
+
+VectorSD::VectorSD(int espacio){
+    info =new int [espacio];
+    reservado = espacio;
+    util=0;
+}
+
+int VectorSD::getDato(int posicion) const{
+    int dato = -1;
+
+    if(posicion<util && posicion>=0) dato = info[posicion];
+
+    return dato;
+}
 ```
 
 ## This en c++
