@@ -1,7 +1,8 @@
 # Notas en clase
 
 ## Datos curiosos
-<iostream\> tiene *cin*, *cout* y *cerr*
+<iostream\> tiene *cin*, *cout* y *cerr* <br>
+***En main, doble_puntero.h y doble_puntero.cpp, he añadido una clase que utiliza .h***
 ````c++
 // constante dimensional
 const int SIZE=10;
