@@ -3,8 +3,8 @@
 ## Indice
 
 * [Datos curiosos](https://github.com/RubenGiC/EnClase#datos-curiosos)
-* [Constantes](https://github.com/RubenGiC/EnClase#donstantes)
-* [Constantes en Funciones](https://github.com/RubenGiC/EnClase#constates-en-funciones)
+* [Constantes](https://github.com/RubenGiC/EnClase#constantes)
+* [Constantes en Funciones](https://github.com/RubenGiC/EnClase#constantes-en-funciones)
 * [Boole en la funcion para comprobaciones](https://github.com/RubenGiC/EnClase#boole-en-la-funcion-para-comprobaciones)
 * [Flujo de datos (Entrada/Salida)](https://github.com/RubenGiC/EnClase#flujo-de-datos-entradasalida)
 * [Formas de leer los datos (cin y getline)](https://github.com/RubenGiC/EnClase#formas-de-recibir-los-datos)
