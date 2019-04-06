@@ -21,11 +21,39 @@ class Clase{
 
     int * vec2;
     void Editar(int n);
+
+    void Ordenar(int array[],int util,bool(* comp)(int,int)){
+      for(int i=0;...){
+        for(int j=0;...){
+          if(!(*comp))(array[i],array[j]){}
+        }
+      }
+    }
+
+    bool ComprobarAscendente();
+    bool ComprobarDescendente();
 };
+
+int main(){
+  Clase c;
+
+  c.Ordenar(datos,util,ComprobarAscendente);
+  c.Ordenar(datos,util,ComprobarDescendente);
+}
 ````
 
 :smile: :computer:  [Lista de Emojis](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
+## Constantes
+
+```c++
+//protejo el contenido de esa variable (NO SE PUEDE MODIFICAR EL CONTENIDO)
+const int variable;
+//protejo el puntero (NO SE PUEDE MODIFICAR EL PUNTERO PERO SI EL CONTENIDO AL QUE APUNTA)
+double * const puntero;
+//protejo ambas cosas el contenido y al puntero (NO SE PUEDE MODIFICAR NI EL CONTENIDO, NI EL PUNTERO)
+const int * const puntero;
+```
 ## Boole en la funcion para comprobaciones
 
 ````c++
@@ -84,6 +112,7 @@ int main(){
 ````
 
 ## Punteros, Vectores y Matrices
+Los punteros no tienen limite de apuntamiento, pueden apuntarse muchas veces.
 
 ````c++
 int num; // int
@@ -130,9 +159,10 @@ puntero = &num;
 &num;
 &(array[5]); // lo mismo que el otro pero con vectores.
 
-//Al funalizar hay que liberar el espacio utilizado de los vectores y matrices
-delete [] array;
-delete [] vector;
+//Al funalizar hay que liberar el espacio utilizado de los punteros y vectores
+delete puntero;//libero el puntero
+delete [] array;//libero el array[SIZE]
+delete [] vector;//libero el * vector[SIZE]
 
 // en el caso de una matriz ya sea dinamica o no primero liberas las filas y luego las columnas
 for(int i=0;i<util;i++){
@@ -211,3 +241,61 @@ int * pn;
 Funcion(&n);
 Funcion(pn);
 ````
+## Punteros con clases
+
+```c++
+//igual que con las variables pero con la diferencia de que son clases
+Clase * puntero;
+Clase clase;
+puntero = &clase;
+//para llamar a una funcion de la clase desde un puntero hay 2 formas
+(* puntero).funcion();
+puntero->funcion();
+```
+
+## Numeros aleatorios
+variable = limite_inferior + rand() % (limite_superior +1 - limite_inferior) ;
+```c++
+//para generar numeros aleatorios necesito estas 2 librerias
+#include<stdlib.h>// libreria para usar srand y rand
+#include<time.h>// libreria para usar time
+
+int main(){
+  //genero semilla de la fecha actual
+  srand(time(NULL));
+  //o en vez de usar null puedes usar 0 para indicar nulo
+  srand(time(0));
+  //genera un numero aleatorio
+  int num = rand();
+
+  //- Número aleatorios entre 0 y 50:
+  num=rand()%51;
+
+  //- Número aleatorios entre 1 y 100:
+  num=1+rand()%(101-1);
+
+  //- Número aleatorios entre 250 y 420:
+  num=250+rand()%(421-250);
+
+  cout << num;
+}
+```
+
+## Creacion de objetos
+
+```c++
+Clase ptr;
+ptr = new Clase();//creo un objeto de Clase
+
+//siempre cada vez que creo un objeto se libera
+delete ptr;
+```
+
+## This en c++
+
+En c++ se puede utilizar el this en las funciones.
+
+```c++
+//pueden ser el mismo nombre ambas variables
+this.variable=variable
+```
