@@ -36,13 +36,12 @@ void Liberar(char * &array, int &util){
  * @param util tamaño utilizado del array
  */
 void Mostrar(ostream &flujo, const char * array, int util){
-    flujo << "Tamaño del array " << util << ":" << endl;
-    flujo << "{";
+    flujo << "Tamaño del array " << util << ":" << endl << "{";
     for(int i=0;i<util;i++){
-        if(i+1<util) flujo << array[i] << ", ";
-        else flujo << array[i];
+        if(i+1<util) {flujo << array[i] << ", ";}
+        else {flujo << array[i];}
     }
-    flujo << "}";
+    flujo << "}" << endl;
 }
 
 /**
@@ -87,5 +86,7 @@ void Leer(istream &flujo,char * &array, int &util){
     char caracter;
     
     //mientras no de un salto de linea o otro caracter seguira pidiendo caracteres
-    while(flujo.get(caracter)){ Add(array,util,caracter);}
+    while(flujo.get(caracter) && caracter!='*'){ 
+        if(caracter!='*' && caracter!='\n') Add(array,util,caracter);
+    }
 }

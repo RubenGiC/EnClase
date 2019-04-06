@@ -18,24 +18,53 @@
 // funciones pedidas
 #include "lector.h"
 #include "doble_puntero.h"
+#include "vectorsd.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
+    
+// VECTORSD --------------------------------------------------------------------
+    
+    cout << "VECTORSD ---------------------------------------------------------" << endl;
+    
+    VectorSD *obj = new VectorSD(5);
+    VectorSD *obj2 = new VectorSD;
+    cout << obj->nElementos();
+    
+    obj->Leer(cin);
+    obj->Mostrar(cout);
+    
+    obj2->Copia(*obj);
+    cout << endl << "Segundo objeto: " << endl;
+    obj2->Mostrar(cout);
+    
+    obj->Liberar();
 
-    char * arrayChar;
-    int utiles, utiles2;
+// DOBLE PUNTERO ---------------------------------------------------------------
+    
+    /*cout << "DOBLE PUNTERO ----------------------------------------------------" << endl;
     
     char ** array;
-    
+    int utiles2;
     //para crear clases con .h, la clase se tiene que llamar igual que el archivo
     //Nota: (puede ser en mayuscula y el archivo no, pero que tenga el mismo nombre)
     //siempre tengo que reservar memoria para crear un objeto de la clase Doble_puntero
     Doble_puntero *v = new Doble_puntero;
     
     //falla el inicializar
-    //v.Inicializar(array,utiles2);
-    v->Redimensionar(array,utiles,1);
+    //v->Inicializar(array,utiles2);
+    v->Redimensionar(array,utiles2,1);*/
+    
+// LECTOR ----------------------------------------------------------------------
+    
+    cout << "LECTOR -----------------------------------------------------------" << endl;
+    
+    cin.ignore();
+    
+    char * arrayChar;
+    int utiles;
+    
     Inicializar(arrayChar,utiles);
     
     //si solo recibe un argumento lo añade de forma manual
@@ -61,9 +90,7 @@ int main(int argc, char** argv) {
     // se libera el espacio
     Liberar(arrayChar,utiles);
     
-    delete [] array;
-    delete [] arrayChar;
-    
+//------------------------------------------------------------------------------
     return 0;
 }
 

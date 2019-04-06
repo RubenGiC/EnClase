@@ -7,6 +7,7 @@
       <logicalFolder name="include" displayName="include" projectFiles="true">
         <itemPath>include/doble_puntero.h</itemPath>
         <itemPath>include/lector.h</itemPath>
+        <itemPath>include/vectorsd.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -17,9 +18,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>src/doble_puntero.cpp</itemPath>
         <itemPath>src/lector.cpp</itemPath>
+        <itemPath>src/vectorsd.cpp</itemPath>
       </logicalFolder>
-      <itemPath>src/doble_puntero.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -58,11 +60,15 @@
       </item>
       <item path="include/lector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/vectorsd.h" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/doble_puntero.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/lector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/vectorsd.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -89,11 +95,15 @@
       </item>
       <item path="include/lector.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/vectorsd.h" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/doble_puntero.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/lector.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/vectorsd.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

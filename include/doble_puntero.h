@@ -8,9 +8,7 @@
 #define DOBLE_PUNTERO_H
 #include <iostream>
 
-void p();
 class Doble_puntero{
-    private:
         
     public:
         //inicializacion de doble puntero

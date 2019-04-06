@@ -37,7 +37,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/src/doble_puntero.o \
-	${OBJECTDIR}/src/lector.o
+	${OBJECTDIR}/src/lector.o \
+	${OBJECTDIR}/src/vectorsd.o
 
 
 # C Compiler Flags
@@ -69,6 +70,11 @@ ${OBJECTDIR}/include/doble_puntero.h.gch: include/doble_puntero.h
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o "$@" include/doble_puntero.h
 
+${OBJECTDIR}/include/vectorsd.h.gch: include/vectorsd.h
+	${MKDIR} -p ${OBJECTDIR}/include
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o "$@" include/vectorsd.h
+
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -83,6 +89,11 @@ ${OBJECTDIR}/src/lector.o: src/lector.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/lector.o src/lector.cpp
+
+${OBJECTDIR}/src/vectorsd.o: src/vectorsd.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Iinclude -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/vectorsd.o src/vectorsd.cpp
 
 # Subprojects
 .build-subprojects:
