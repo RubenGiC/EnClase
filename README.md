@@ -151,6 +151,10 @@ cin >> variable;
 // variable tiene que ser un string, por que lo que devuelve es un string
 getline(cin,variable);
 
+// recibe una variable de tipo string o char y el tamaño que se va a almacenar 
+//(es decir el numero de caracteres que se introducira).
+cin.getline(variable,tamaño);
+
 //si mezclamos ambos despues de hacen un cin hay que poner esto para que lo ignore
 cin.ignore();
 ````
