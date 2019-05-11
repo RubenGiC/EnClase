@@ -19,6 +19,15 @@
 * [This](https://github.com/RubenGiC/EnClase#this-en-c)
 * [Reduccion de tiempo de ejecucion (inline)](https://github.com/RubenGiC/EnClase#reduccion-de-tiempo-de-ejecucion-inline)
 * [Constructor que recibe un objeto](https://github.com/RubenGiC/EnClase#constructor-que-recibe-un-objeto)
+* [Clases](https://github.com/RubenGiC/EnClase#clases)
+
+## CLASES
+### Calores por defecto en las funciones:
+```c++
+//los por defecto siempre se ponen a la derecha y al ponerle =0 quiere decir que si no recibe 
+//ningun valor por defecto toma 0
+void comprobacion(int xs, int ys, int dxs=0, int dys=0);
+```
 
 ## Datos curiosos
 <iostream\> tiene *cin*, *cout* y *cerr* <br>
